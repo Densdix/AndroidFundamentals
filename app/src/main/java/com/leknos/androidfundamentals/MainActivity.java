@@ -4,6 +4,7 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -40,44 +41,15 @@ public class MainActivity extends AppCompatActivity {
         });
         Log.d(LOG_TAG, "-------");
         Log.d(LOG_TAG, "onCreate");
-    }
 
-    @Override
-    public void onStart(){
-        super.onStart();
-        Log.d(LOG_TAG, "onStart");
+        Intent intent = getIntent();
+        Uri uri = intent.getData();
+        if(uri != null){
+            String uri_string = "URI: " + uri.toString();
+            TextView textView = findViewById(R.id.text_uri_message);
+            textView.setText(uri_string);
+        }
     }
-
-    @Override
-    protected void onResume() {
-        super.onResume();
-        Log.d(LOG_TAG, "onResume");
-    }
-
-    @Override
-    protected void onPause() {
-        super.onPause();
-        Log.d(LOG_TAG, "onPause");
-    }
-
-    @Override
-    protected void onStop() {
-        super.onStop();
-        Log.d(LOG_TAG, "onStop");
-    }
-
-    @Override
-    protected void onRestart() {
-        super.onRestart();
-        Log.d(LOG_TAG, "onRestart");
-    }
-
-    @Override
-    protected void onDestroy() {
-        super.onDestroy();
-        Log.d(LOG_TAG, "onDestroy");
-    }
-
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
@@ -90,5 +62,10 @@ public class MainActivity extends AppCompatActivity {
             }
         }
 
+    }
+
+    public void implicitIntent(View view) {
+        Intent intent = new Intent(MainActivity.this, ImplicitIntentsActivity.class);
+        startActivity(intent);
     }
 }
