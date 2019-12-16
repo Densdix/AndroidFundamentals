@@ -11,26 +11,34 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".ImplicitIntentsActivity"></activity>
+        <activity android:name=".OrderActivity" />
+        <activity
+            android:name=".ClickableImagesActivity"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity android:name=".ImplicitIntentsActivity" />
         <activity
             android:name=".SecondActivity"
             android:label="Second Activity"
             android:parentActivityName=".MainActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".MainActivity"></meta-data>
+                android:value=".MainActivity" />
         </activity>
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
+
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.BROWSABLE" />
-                <data android:scheme="http"
-                    android:host="developer.android.com" />
+
+                <data
+                    android:host="developer.android.com"
+                    android:scheme="http" />
             </intent-filter>
         </activity>
     </application>

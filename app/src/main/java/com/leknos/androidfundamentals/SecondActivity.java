@@ -26,9 +26,6 @@ public class SecondActivity extends AppCompatActivity {
         mReply = findViewById(R.id.editText_second);
         returnReplyButton = findViewById(R.id.button_second);
 
-        String message = getIntent().getStringExtra(MainActivity.EXTRA_MESSAGE);
-        textHeader.setText(message);
-
         returnReplyButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

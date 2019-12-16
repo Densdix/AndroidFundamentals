@@ -35,4 +35,18 @@ This volume starts with the first new Beatle song, “Free as a Bird” (based o
     <string name="edittext_share">\'Twas brillig and the slithy toves</string>
     <string name="button_share">Share This Text</string>
     <string name="take_a_picture">Take a picture</string>
+
+    <string name="droid_desserts">Droid Desserts</string>
+    <string name="donuts">Donuts are glazed and sprinkled with candy.</string>
+    <string name="ice_cream_sandwiches">Ice cream sandwiches have chocolate wafers and vanilla filling.</string>
+    <string name="froyo">FroYo is premium self-serve frozen yogurt.</string>
+
+    <string name="donut_order_message">You ordered a donut.</string>
+    <string name="ice_cream_order_message">You ordered an ice cream sandwich.</string>
+    <string name="froyo_order_message">You ordered a FroYo.</string>
+    <string name="title_activity_main2">Main2Activity</string>
+    <string name="title_activity_main22">Main22Activity</string>
+    <string name="order">Order</string>
+    <string name="clickable_images">Clickable images</string>
+    <string name="implicit_intent">Implicit_Intent</string>
 </resources>
